@@ -20,7 +20,7 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "FloorIsLava" || collision.gameObject.name == "Finish")
+        if (collision.gameObject.name == "FloorIsLava" || collision.gameObject.name == "Finish" || collision.gameObject.name == "Left" || collision.gameObject.name == "Right")
         {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(0);
