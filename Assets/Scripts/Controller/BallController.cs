@@ -20,7 +20,6 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
         if (collision.gameObject.name == "FloorIsLava" || collision.gameObject.name == "Finish")
         {
             Scene scene = SceneManager.GetActiveScene();
@@ -51,6 +50,18 @@ public class BallController : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.y < 0 )
+        {
+            Scene scene = SceneManager.GetActiveScene();
+
+            if (scene != null)
+            {
+                SceneManager.LoadScene(0);
+                return;
+            }
+
+        }
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
