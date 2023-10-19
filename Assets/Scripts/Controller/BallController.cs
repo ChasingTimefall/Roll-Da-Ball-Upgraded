@@ -20,13 +20,13 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "FloorIsLava" || collision.gameObject.name == "Finish" || collision.gameObject.name == "Left" || collision.gameObject.name == "Right")
+        if (collision.gameObject.name == "AnimCube" || collision.gameObject.name == "AnimSphere" || collision.gameObject.name == "FloorIsLava" || collision.gameObject.name == "Finish" || collision.gameObject.name == "Left" || collision.gameObject.name == "Right")
         {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(0);
         }
 
-        if (collision.gameObject.name == "RampFirst")
+        if (collision.gameObject.name == "SpeedRamp")
         {
             bInCollisionWithRamp = true;
         }
@@ -34,7 +34,7 @@ public class BallController : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "RampFirst")
+        if (collision.gameObject.name == "SpeedRamp")
         {
             bInCollisionWithRamp = false;
         }
