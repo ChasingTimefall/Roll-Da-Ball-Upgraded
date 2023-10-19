@@ -38,6 +38,13 @@ public class UserInterface : MonoBehaviour
                 SceneManager.LoadScene(scene.buildIndex + 1);
             }
         }
+
+        if (RenderButton("Exit", new Vector2(vecScreenSize.x / 2f, (vecScreenSize.y / 2f + 50)), new Vector2(50, 30)))
+        {
+            Application.Quit();
+        }
+
+
     }
     void Update()
     {
