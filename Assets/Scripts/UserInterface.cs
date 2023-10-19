@@ -28,6 +28,8 @@ public class UserInterface : MonoBehaviour
     {
         Vector2 vecScreenSize = GetScreenSize();
 
+        GUI.Label(new Rect(10,10,90,30), "build v1.2");
+
         if (RenderButton("Start", new Vector2(vecScreenSize.x / 2f, vecScreenSize.y / 2f), new Vector2(50, 30)))
         {
             Scene scene = SceneManager.GetActiveScene();
