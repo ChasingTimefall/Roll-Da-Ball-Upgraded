@@ -64,32 +64,23 @@ public class BallController : MonoBehaviour
 
     private void Move()
     {
-        // Getting the direction to move through player input
         float hMove = Input.GetAxis("Horizontal");
         float vMove = Input.GetAxis("Vertical");
         float speed = 5.0f;
 
-        // Get directions relative to camera
         Vector3 forward = CamObj.transform.forward;
         Vector3 right = CamObj.transform.right;
 
-        // Project forward and right direction on the horizontal plane (not up and down), then
-        // normalize to get magnitude of 1
         forward.y = 0;
         right.y = 0;
         forward.Normalize();
         right.Normalize();
 
-        // Set the direction for the player to move
         Vector3 dir = right * hMove + forward * vMove;
-
-        // Set the direction's magnitude to 1 so that it does not interfere with the movement speed
         dir.Normalize();
+        Vector3 NewDirection = dir * speed * 2;
+        pRigidBody.velocity = new Vector3(NewDirection.x, pRigidBody.velocity.y, NewDirection.z);
 
-        // Move the player by the direction multiplied by speed and delta time 
-       // transform.position += dir * speed * Time.deltaTime;
-
-        pRigidBody.MovePosition(dir * speed * Time.deltaTime);
 
         // Set rotation to direction of movement if moving
         if (dir != Vector3.zero)
