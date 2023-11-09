@@ -65,15 +65,15 @@ public class CamController : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-        distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * zoomSpeed, distanceMin, distanceMax);
+       // distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * zoomSpeed, distanceMin, distanceMax);
 
 
 
-        RaycastHit hit;
-        if (Physics.Linecast(MoveObject.transform.position, transform.position, out hit))
-        {
-            distance -= hit.distance;
-        }
+       // RaycastHit hit;
+       // if (Physics.Linecast(MoveObject.transform.position, transform.position, out hit))
+       // {
+       //     distance -= hit.distance;
+      //  }
         Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
         Vector3 position = rotation * negDistance + MoveObject.transform.position;
 

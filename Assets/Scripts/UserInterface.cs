@@ -30,7 +30,7 @@ public class UserInterface : MonoBehaviour
 
         GUI.Label(new Rect(10,10,90,30), "build v1.2");
 
-        if (RenderButton("Start", new Vector2(vecScreenSize.x / 2f, vecScreenSize.y / 2f), new Vector2(50, 30)))
+        if (RenderButton("Start", new Vector2(vecScreenSize.x / 2f + 100, vecScreenSize.y / 2f), new Vector2(50, 30)))
         {
             Scene scene = SceneManager.GetActiveScene();
             if (scene != null)
@@ -39,7 +39,7 @@ public class UserInterface : MonoBehaviour
             }
         }
 
-        if (RenderButton("Exit", new Vector2(vecScreenSize.x / 2f, (vecScreenSize.y / 2f + 50)), new Vector2(50, 30)))
+        if (RenderButton("Exit", new Vector2(vecScreenSize.x / 2f + 100, (vecScreenSize.y / 2f + 50)), new Vector2(50, 30)))
         {
             Application.Quit();
         }
