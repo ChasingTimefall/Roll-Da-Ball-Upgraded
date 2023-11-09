@@ -27,7 +27,7 @@ public class FailLevelInterface : MonoBehaviour
     {
         Vector2 vecScreenSize = GetScreenSize();
 
-        GUI.Label(new Rect(10, 10, 90, 30), "build v1.2");
+        GUI.Label(new Rect(10, 10, 90, 30), "build v1.3");
 
         GUI.Label(new Rect(vecScreenSize.x / 2f - 70, vecScreenSize.y / 2f - 60, 200, 30), "You couldnt pass the level");
 

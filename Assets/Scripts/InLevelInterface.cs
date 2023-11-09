@@ -20,7 +20,7 @@ public class InLevelInterface : MonoBehaviour
     {
         Vector2 vecScreenSize = GetScreenSize();
 
-        GUI.Label(new Rect(10, 10, 90, 30), "build v1.2");
+        GUI.Label(new Rect(10, 10, 90, 30), "build v1.3");
 
     }
     void Update()
