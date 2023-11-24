@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelInfo : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class LevelInfo : MonoBehaviour
 
     void OnGUI()
     {
+        GUI.Label(new Rect(10, 10, 280, 30), "Press exit to return to main menu");
+
         if (TextStyle == null)
         {
             TextStyle = new GUIStyle(GUI.skin.label);
@@ -24,12 +27,6 @@ public class LevelInfo : MonoBehaviour
             TextStyle.normal.textColor = Color.red;
             TextStyle.hover.textColor = Color.red;
         }
-        // Load and set Font
-
-
-        // Set color for selected and unselected buttons
-
-
 
         GUI.Label(new Rect(10, 90, 130, 130), "Score : " + iScore, TextStyle);
     }
@@ -37,6 +34,14 @@ public class LevelInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene != null)
+            {
+                SceneManager.LoadScene("Menu");
+            }
+        }
         
     }
 }

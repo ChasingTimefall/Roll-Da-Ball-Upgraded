@@ -77,10 +77,9 @@ public class CamController : MonoBehaviour
         Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
         Vector3 position = rotation * negDistance + MoveObject.transform.position;
 
-
-
         transform.rotation = rotation;
         transform.position = position;
+
         //   transform.LookAt(MoveObject.transform);
 
 
@@ -89,5 +88,10 @@ public class CamController : MonoBehaviour
         //  transform.RotateAround(Vector3.zero, transform.right, rotateVertical * flSensitivity); 
         //    transform.LookAt(MoveObject.transform);
     }
+
+
+    public float distanceFromTarget = 5.0f; // Default distance from the target
+    public Vector3 cameraOffset; // Offset of the camera position
+
 
 }
