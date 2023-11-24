@@ -16,7 +16,7 @@ public class LevelInfo : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 280, 30), "Press exit to return to main menu");
+        GUI.Label(new Rect(10, 10, 280, 30), "Press escape to return to main menu");
 
         if (TextStyle == null)
         {
