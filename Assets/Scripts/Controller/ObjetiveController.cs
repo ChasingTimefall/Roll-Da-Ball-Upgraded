@@ -12,7 +12,9 @@ public class ObjetiveController : MonoBehaviour
     void OnGUI()
     {
         if (iObjective == 0)
-        GUI.Label(new Rect(10, 300, 280, 30), "Collect cubes to reach objective location");
+         GUI.Label(new Rect(10, 300, 380, 30), "Objective : Collect cubes to reach objective location");
+        else if (iObjective == 1)
+         GUI.Label(new Rect(10, 300, 380, 30), "Objective : Collect hidden cubes in the area");
 
     }
 }

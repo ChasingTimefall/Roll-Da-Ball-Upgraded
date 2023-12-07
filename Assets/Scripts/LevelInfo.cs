@@ -29,6 +29,15 @@ public class LevelInfo : MonoBehaviour
         }
 
         GUI.Label(new Rect(10, 90, 130, 130), "Score : " + iScore, TextStyle);
+
+        if (iScore == 12)
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene != null)
+            {
+                SceneManager.LoadScene("LevelSuccess");
+            }
+        }
     }
 
     // Update is called once per frame
