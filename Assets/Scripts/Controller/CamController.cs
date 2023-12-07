@@ -17,7 +17,7 @@ public class CamController : MonoBehaviour
     private Transform parentTransform;
     public LayerMask collisionLayers; // Layers to check for collision
 
-    private Vector3 offset = new Vector3(4, 4, 4);
+    private Vector3 offset = new Vector3(2, 2, 2);
 
     void Start()
     {
